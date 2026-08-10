@@ -48,7 +48,15 @@ namespace LINQ_Task
              */
 
             // ============================================
-            // YOUR SOLUTION HERE
+            // YOUR SOLUTION
+            // 
+            var group2Students = students
+                .Where(s => s.GroupNumber == 2) 
+                .OrderBy(s => s.FirstName);
+
+            Console.WriteLine(string.Join("\n", group2Students) );
+
+
             // ============================================
 
         }
