@@ -51,6 +51,36 @@ namespace LINQ_Task
 
             // ============================================
             // YOUR SOLUTION HERE
+
+
+            var filteredStudents = students
+                .Where(s => s.FirstName.Length > 5)
+                .OrderByDescending(s => s.FirstName.Length);
+
+            foreach (var student in filteredStudents)
+            {
+                Console.WriteLine($"{student} (Length: {student.FirstName.Length})");
+            }
+
+
+
+            var filteredStudentsQuery = from s in students
+                                        where s.FirstName.Length > 5
+                                        orderby s.FirstName.Length descending
+                                        select s;
+
+            foreach (var student in filteredStudentsQuery)
+            {
+                Console.WriteLine($"{student} (Length: {student.FirstName.Length})");
+            } 
+
+
+
+
+
+
+
+
             // ============================================
 
         }
