@@ -64,6 +64,8 @@ namespace LINQ_Task
 
 
 
+            //Query syntax version
+
             var filteredStudentsQuery = from s in students
                                         where s.FirstName.Length > 5
                                         orderby s.FirstName.Length descending
@@ -73,12 +75,6 @@ namespace LINQ_Task
             {
                 Console.WriteLine($"{student} (Length: {student.FirstName.Length})");
             } 
-
-
-
-
-
-
 
 
             // ============================================
