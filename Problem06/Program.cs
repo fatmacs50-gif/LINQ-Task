@@ -48,6 +48,12 @@ namespace LINQ_Task
 
             // ============================================
             // YOUR SOLUTION HERE
+            var weakStudents = students.Where(s => s.Marks.Count(m => m <= 3) >= 2);
+
+            foreach (var student in weakStudents)
+            {
+                Console.WriteLine(student);
+            }
             // ============================================
 
         }

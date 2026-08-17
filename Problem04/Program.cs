@@ -54,7 +54,12 @@ namespace LINQ_Task
 
              var reasult = students.GroupBy(s => s.GroupNumber)
                             .OrderBy(g => g.Key)
-                            .Select(g => new { GroupNumber = g.Key, Count = g.Count() });
+                            .Select(g => new
+                            { GroupNumber = g.Key,
+
+                             Count = g.Count()
+
+                            });
 
             foreach (var group in reasult)
             {

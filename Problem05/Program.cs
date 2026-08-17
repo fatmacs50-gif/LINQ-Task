@@ -48,6 +48,15 @@ namespace LINQ_Task
 
             // ============================================
             // YOUR SOLUTION HERE
+
+
+            var result= students.Where(x => x.Marks.Contains(6)); 
+
+            foreach (var student in result)
+            {
+                Console.WriteLine(student);
+            }
+
             // ============================================
 
         }
