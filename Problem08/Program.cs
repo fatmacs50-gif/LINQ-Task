@@ -55,6 +55,22 @@ namespace LINQ_Task
             */
             // ============================================
             // YOUR SOLUTION HERE
+            var result = students
+                .Where(s => (s.Department == "Computer Science" || s.Department == "Engineering") && s.Marks.Count(m => m <= 3) >= 2)
+                .GroupBy(s => s.Department)
+                .OrderBy(g => g.Key);
+
+            foreach (var group in result)
+            {
+                Console.WriteLine($"Department: {group.Key}");
+                foreach (var student in group.OrderBy(s => s.FirstName).ThenBy(s => s.LastName))
+                {
+                    Console.WriteLine($"- {student}");
+                }
+                Console.WriteLine();
+            }
+
+
             // ============================================
 
         }
